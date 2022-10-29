@@ -1,0 +1,66 @@
+%!TEX TS-program = latexmk
+%!TeX options = -synctex=1 -interaction=nonstopmode -pdf %DOCFILE%
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper,12pt]{article}
+
+\RequirePackage[l2tabu]{nag}        % Warns for incorrect (obsolete) LaTeX usage
+
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}                  % Loads the "amsmath" package, and contains other mathematical symbols and environments
+\usepackage{graphicx}                   % Calls figure environment, i.e., starting figures with \includegraphics
+\usepackage{float}                      % Helps to place figures, tables, etc. 
+
+\usepackage{datetime}
+\usepackage{ifpdf}
+\ifpdf
+    \pdfinfo{
+        /Author Eshwen Bhal
+        /Title (Mathematics Formulae and Identities)
+        /Keywords (mathematics; formula; identity; trigonometry)
+        /CreationDate (D:\pdfdate)
+    }
+\fi
+
+\frenchspacing                          % single space after a sentence
+\usepackage[T1]{fontenc}                % To encode the font (glyphs/characters as bits)
+\usepackage[utf8]{inputenc}             % Needed to encode non-english characters directly for mac
+
+% Oscar's command (it works): Fills blank pages until next odd-numbered page. Used to emulate single-sided frontmatter. This will work for title, abstract and declaration. Though the contents sections will each start on an odd-numbered page they will spill over onto the even-numbered pages if extending beyond one page (hopefully, this is ok).
+\newcommand{\clearemptydoublepage}{\newpage{\thispagestyle{empty}\cleardoublepage}}
+% ======================================
+
+% ======================================
+% The import command enables each chapter tex file to use relative paths when accessing supplementary files. For example, to include chapters/brewing/images/figure1.png from chapters/brewing/brewing.tex we can use \includegraphics{images/figure1} instead of \includegraphics{chapters/brewing/images/figure1}
+\usepackage{import}
+
+\usepackage{hyperref}                   % to hyperlink references, contents, etc. Change colours if required
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,                    % Colour of internal links (i.e., cross-references, glossary/acronym terms)
+    filecolor=Fuchsia,
+    urlcolor=Crimson,
+    citecolor=Cerulean,
+}
+
+% ======================================                            
+% Reduce widows (the last line of a paragraph at the start of a page) and orphans (the first line of paragraph at the end of a page)
+\widowpenalty=1000
+\clubpenalty=1000
+
+\title{Mathematics Formulae and Identities}
+\author{Eshwen Bhal}
+
+\begin{document}
+
+\maketitle
+
+% TODO: Add ToC here
+
+\clearemptydoublepage
+
+\import{sections}{trigonometry.tex}
+\clearemptydoublepage
+
+\end{document}
