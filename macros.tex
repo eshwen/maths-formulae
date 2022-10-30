@@ -1,2 +1,5 @@
 \newcommand{\defeq}{\ensuremath{\vcentcolon =}}
 \newcommand{\radian}{\ensuremath{\,\mathrm{rad}}\xspace}
+
+% Oscar's command (it works): Fills blank pages until next odd-numbered page. Used to emulate single-sided frontmatter. This will work for title, abstract and declaration. Though the contents sections will each start on an odd-numbered page they will spill over onto the even-numbered pages if extending beyond one page (hopefully, this is ok).
+\newcommand{\clearemptydoublepage}{\newpage{\thispagestyle{empty}\cleardoublepage}}
