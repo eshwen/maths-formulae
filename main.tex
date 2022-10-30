@@ -2,7 +2,7 @@
 %!TeX options = -synctex=1 -interaction=nonstopmode -pdf %DOCFILE%
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[a4paper,12pt,openright]{report}
+\documentclass[a4paper,12pt,openright,oneside]{book}
 
 \RequirePackage[l2tabu]{nag}        % Warns for incorrect (obsolete) LaTeX usage
 
@@ -58,20 +58,23 @@
 
 \begin{document}
 
+% Preliminary pages
+\frontmatter
+
 \maketitle
-
-\clearpage
-
-\pagenumbering{roman}
+\clearemptydoublepage
 
 \tableofcontents
 \addtocontents{toc}{\par\nobreak \mbox{}\hfill\textbf{Page}\par\nobreak}
-
 \clearemptydoublepage
 
-\pagenumbering{arabic}
+% The bulk of the document
+\mainmatter
 
 \import{chapters}{trigonometry.tex}
 \clearemptydoublepage
+
+% Any bibliography, glossary, index, etc.
+\backmatter
 
 \end{document}
