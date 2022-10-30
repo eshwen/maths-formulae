@@ -52,13 +52,22 @@
 \title{Mathematics Formulae and Identities}
 \author{Eshwen Bhal}
 
+\input{macros}
+
 \begin{document}
 
 \maketitle
 
-% TODO: Add ToC here
+\clearpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+\addtocontents{toc}{\par\nobreak \mbox{}\hfill\textbf{Page}\par\nobreak}
 
 \clearemptydoublepage
+
+\pagenumbering{arabic}
 
 \import{sections}{trigonometry.tex}
 \clearemptydoublepage
