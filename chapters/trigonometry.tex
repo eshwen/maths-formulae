@@ -1,0 +1,234 @@
+\chapter{Trigonometry}
+\label{sec:trig}
+
+Sine as a power series:
+
+\begin{equation}
+    \sin x \equiv \sum_{n = 1}^{\infty} \frac{(-1)^{n - 1} \ x^{2n - 1}}{(2n - 1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!} - \dots
+    \label{eq:sin_power_series}
+\end{equation}
+
+Cosine as a power series:
+
+\begin{equation}
+    \cos x \equiv \sum_{n = 0}^{\infty} \frac{(-1)^n \ x^{2n}}{(2n)!} = x - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \frac{x^8}{8!} - \dots
+    \label{eq:cos_power_series}
+\end{equation}
+
+Tangent:
+
+\begin{equation}
+    \tan x = \frac{\sin x}{\cos x}
+    \label{eq:tan}
+\end{equation}
+
+Sine in complex exponentials:
+
+\begin{equation}
+    \sin \theta = \frac{1}{2i} (e^{i\theta} - e^{-i\theta})
+    \label{eq:sin_complex_exp}
+\end{equation}
+
+Cosine in complex exponentials:
+
+\begin{equation}
+    \cos \theta = \frac{1}{2} (e^{i\theta} + e^{-i\theta})
+    \label{eq:cos_complex_exp}
+\end{equation}
+
+Sine squared:
+
+\begin{equation}
+    \sin^2 x = 1 - \cos^2 x = \frac{1}{2} (1 - \cos 2x)
+    \label{eq:sin_squared}
+\end{equation}
+
+Cosine squared:
+
+\begin{equation}
+    \cos^2 x = 1 - \sin^2 x = \frac{1}{2} (1 + \cos 2x)
+    \label{eq:cos_squared}
+\end{equation}
+
+Sine and cosine squared:
+
+\begin{equation}
+    \sin^2 x + \cos^2 x = 1
+    \label{eq:sin_cos_squared}
+\end{equation}
+
+Double angle formula (sine):
+
+\begin{equation}
+    \sin 2x = 2\sin x \cos x
+    \label{eq:double_angle_sin}
+\end{equation}
+
+Double angle formula (cosine):
+
+\begin{equation}
+    \cos 2x = \cos^2 x - \sin^2 x = 2cos^2 x - 1 = 1 - 2\sin^2 x
+    \label{eq:double_angle_cos}
+\end{equation}
+
+Double angle formula (tangent):
+
+\begin{equation}
+    \tan 2x = \frac{2\tan x}{1 - \tan^2 x} \ \text{where} \ x \neq 45^{\circ}, 135^{\circ}, 225^{\circ} \dots
+    \label{eq:double_angle_tan}
+\end{equation}
+
+Multiple angle formulae:
+
+\begin{equation}
+    \begin{aligned}
+        \sin(A + B) &= \sin A \cos B + \cos A \sin B \\
+        \sin(A - B) &= \sin A \cos B - \cos A \sin B \\
+        \cos(A + B) &= \cos A \cos B - \sin A \sin B \\
+        \cos(A - B) &= \cos A \cos B + \sin A \sin B \\\\
+        \tan(A + B) &= \frac{\tan A + \tan B}{1 - \tan A \tan B} \ \text{where} \ (A + B) \neq 90^{\circ}, 270^{\circ} \dots\\
+        \tan(A - B) &= \frac{\tan A - \tan B}{1 + \tan A \tan B} \ \text{where} \ (A - B) \neq 90^{\circ}, 270^{\circ} \dots\\\\
+        \sin A \sin B &= \frac{1}{2}[\cos(A - B) - \cos(A + B)] \\
+        \cos A \cos B &= \frac{1}{2}[\cos(A - B) + \cos(A + B)] \\
+        \sin A \cos B &= \frac{1}{2}[\sin(A + B) + \sin(A - B)] \\\\
+        \sin A + \sin B &= 2\sin\frac{A + B}{2} \cos\frac{A - B}{2}\\
+        \sin A - \sin B &= 2\cos\frac{A + B}{2} \sin\frac{A - B}{2}\\
+        \cos A + \cos B &= 2\cos\frac{A + B}{2} \cos\frac{A - B}{2}\\
+        \cos A - \cos B &= 2\sin\frac{A + B}{2} \sin\frac{B - A}{2}
+    \end{aligned}
+    \label{eq:multi_angle}
+\end{equation}
+
+Cosecant (inverse sine):
+
+\begin{equation}
+    \csc x \defeq \frac{1}{\sin x}
+    \label{eq:cosec}
+\end{equation}
+
+Secant (inverse cosine):
+
+\begin{equation}
+    \sec x \defeq \frac{1}{\cos x}
+    \label{eq:sec}
+\end{equation}
+
+Cotangent (inverse tangent):
+
+\begin{equation}
+    \cot x \defeq \frac{1}{\tan x} = \frac{\cos x}{\sin x}
+    \label{eq:cot}
+\end{equation}
+
+Inverse trigonometric identities:
+
+\begin{equation}
+    \begin{aligned}
+        \csc^2 x &= 1 + \cot^2 x\\
+        \sec^2 x &= 1 + \tan^2 x
+    \end{aligned}
+    \label{eq:inverse_trig}
+\end{equation}
+
+
+\section{Conversions between degrees and radians}
+
+Converting degrees to radians:
+
+\begin{equation}
+    x[^{\circ}] = x[\radian] \times \frac{180}{\pi}
+\end{equation}
+
+\noindent{}Converting radians to degrees:
+
+\begin{equation}
+    x[\radian] = x[^{\circ}] \times \frac{\pi}{180}
+\end{equation}
+
+
+\section{Small angle approximations}
+
+Valid for $x < 10^{\circ}$, with $x$ expressed in radians. Uses the expansions from Eqs.~\ref{eq:sin_power_series}, ~\ref{eq:cos_power_series}.
+
+\
+
+\noindent{}For $x$, sine, and tangent:
+\begin{equation}
+    x \sim \sin x \sim \tan x
+\end{equation}
+
+\noindent{}For cosine:
+
+\begin{equation}
+    \begin{aligned}
+        \cos x &\sim 1 - \frac{x^2}{2}\\
+        \cos (ax) &\sim 1 - \frac{(ax)^2}{2}
+    \end{aligned}
+\end{equation}
+
+
+\section{Examples}
+
+\subsection{Solving equations with multiple angle formulae}
+
+Take $3\cos x + 4\sin x = 1$ as an example. Let
+
+\begin{equation*}
+    \begin{aligned}
+    3\cos x + 4\sin x &= R\cos (x - \alpha) \\
+    &= R(\cos x \cos \alpha + \sin x \sin \alpha) \leftarrow \text{from Eq.~\ref{eq:multi_angle}}
+    \end{aligned}
+\end{equation*}
+
+\noindent{}Then
+
+\begin{equation*}
+    \underline{3}\cos x + \uwave{4}\sin x = \underline{R\cos\alpha} \cos x + \uwave{R\sin\alpha} \sin x
+\end{equation*}
+
+\noindent{}So $R\cos\alpha = 3$ and $R\sin\alpha = 4$, therefore
+
+\begin{equation*}
+    \begin{aligned}
+    \tan\alpha &= 4/3\\
+    \therefore \alpha &= \arctan (4/3)\\
+    \alpha &= 0.441 \radian = 53.1^{\circ}
+    \end{aligned}
+\end{equation*}
+
+\noindent{}If we square the relations above, we get $R^2\cos^2\alpha = 9$ and $R^2\sin^2\alpha = 16$. We can now calculate $R$:
+
+\begin{equation*}
+    \begin{aligned}
+    R^2\sin^2\alpha + R^2\cos^2\alpha &= 25\\
+    R^2(\sin^2\alpha + \cos^2\alpha) &= 25\\
+    R^2 &= 25\\
+    R &= 5
+    \end{aligned}
+\end{equation*}
+
+\noindent{}So
+
+\begin{equation*}
+    \begin{aligned}
+        3\cos x + 4\sin x = 1 &= 5\cos (x - 0.441)\\
+        5\cos(x - 0.441) &= 1\\
+        \color{red} x &\color{red}= \arccos (1/5) + 0.441
+    \end{aligned}
+\end{equation*}
+
+
+\subsection{Expanding multiple angles as single and double angles}
+
+Take $\sin (3x)$ as an example:
+
+\begin{equation*}
+    \begin{aligned}
+        \sin(3x) &\equiv \sin(2x + x)\\
+        &= \sin(2x)\cos x + \cos(2x) \sin x \leftarrow \text{From Eq.~\ref{eq:multi_angle}}\\
+        &= 2\sin x \cos^2 x + \cos(2x) \ \sin x\\
+        &= 2\sin x \cos^2 x + (\cos^2 x - \sin^2 x)\sin x\\
+        &= \sin x (3\cos^2 x - \sin^2 x)\\
+        &= \sin x (4\cos^2 x - 1)
+    \end{aligned}
+\end{equation*}
